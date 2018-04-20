@@ -2,11 +2,11 @@
   "name": "purescript-netlify",
   "private": true,
   "scripts": {
-    "build": "./node_modules/.bin/pulp browserify --to dist/app.js",
+    "prebuild" : "./install-deps.sh"
+    "build": "./node_modules/.bin/pulp browserify --to dist/app.js && stack help",
     "postinstall": "./node_modules/.bin/bower cache clean && ./node_modules/.bin/bower install"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "bower": "^1.8.2",
     "pulp": "^12.0.0",
